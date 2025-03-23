@@ -8,6 +8,8 @@
   --main-website-color: #ceb19c;
   --default-transition: 0.4s;
   --default-button-color: #f1345d;
+  --default-button-hover-color: #b80c31;
+  --paragraph-color: #494949;
 }
 main {
   display: flex;
@@ -60,6 +62,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 57px;
 }
 .header-banner h1 {
   font-size: 100px;
@@ -74,10 +77,90 @@ nav {
   font-weight: 500;
   color: white;
   border: none;
+  transition: var(--default-transition);
+}
+.header-banner button:hover {
+  background-color: var(--default-button-hover-color);
+}
+.about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us-welcome-paragraph {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  text-align: center;
+}
+h6 {
+  color: var(--main-website-color);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+}
+.about-us-welcome-paragraph h2 {
+  font-size: 70px;
+  color: var(--paragraph-color);
+  font-weight: 300;
+}
+hr {
+  background-color: var(--main-website-color);
+  height: 1px;
+  border: 0;
+  width: 77px;
+}
+p {
+  font-size: 18px;
+  color: var(--paragraph-color);
+  line-height: 30px;
+  font-weight: 250;
+}
+.about-us-founder-section {
+  width: 100%;
+
+  background: url(Images/intro-bg2_02.jpg) no-repeat center center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  gap: 100px;
+}
+.about-us-founder-bio-section {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  text-align: center;
+}
+.about-us-founder-bio-section h2 {
+  font-size: 35px;
+  color: var(--paragraph-color);
+}
+.about-us-founder-bio-section a {
+  text-decoration: none;
+}
+.about-us-founder-bio-section span {
+  color: darkcyan;
+  transition: var(--default-transition);
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.about-us-founder-bio-section span:hover {
+  color: darkblue;
+}
+.about-us-founder-picture {
+  align-self: flex-end;
 }
 @media (max-width: 970px) {
   nav {
-    width: 90%;
+    width: 95%;
   }
   .navbar-image-element {
     padding-left: 30px;
@@ -104,6 +187,14 @@ nav {
     text-align: center;
     font-size: 3rem;
     transition: 0.3s ease;
+  }
+  .about-us-welcome-paragraph {
+    width: 80%;
+  }
+}
+@media (max-width: 780px) {
+  .about-us-welcome-paragraph {
+    margin-bottom: 70px;
   }
 }
 @media (max-width: 550px) {
