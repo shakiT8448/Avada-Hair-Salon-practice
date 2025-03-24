@@ -102,7 +102,7 @@ h6 {
   font-style: italic;
   font-weight: 300;
 }
-.about-us-welcome-paragraph h2 {
+h2 {
   font-size: 70px;
   color: var(--paragraph-color);
   font-weight: 300;
@@ -121,7 +121,6 @@ p {
 }
 .about-us-founder-section {
   width: 100%;
-
   background: url(Images/intro-bg2_02.jpg) no-repeat center center;
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +146,7 @@ p {
   text-decoration: none;
 }
 .about-us-founder-bio-section span {
-  color: darkcyan;
+  color: #695af2;
   transition: var(--default-transition);
   letter-spacing: 3px;
   font-weight: bold;
@@ -158,12 +157,58 @@ p {
 .about-us-founder-picture {
   align-self: flex-end;
 }
+.our-stylists {
+  width: 100%;
+  background: url(Images/stylist-bg.jpg) no-repeat center center;
+  background-size: cover;
+}
+.our-stylists-paragraph {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin: 80px auto 70px;
+}
+.our-stylists-bio-main-container {
+  width: 83%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--paragraph-color);
+}
+.our-stylists-individual-container {
+  width: 18%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.our-stylists-individual-container img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.our-stylists-individual-container h3,
+h4,
+p {
+  margin: 0 23px;
+}
+.our-stylists-individual-container h4 {
+  color: var(--main-website-color);
+}
 @media (max-width: 970px) {
   nav {
     width: 95%;
   }
   .navbar-image-element {
     padding-left: 30px;
+  }
+}
+@media (max-width: 920px) {
+  .our-stylists-bio-main-container {
+    width: 90%;
   }
 }
 @media (max-width: 860px) {
@@ -192,13 +237,30 @@ p {
     width: 80%;
   }
 }
-@media (max-width: 780px) {
+@media (max-width: 800px) {
   .about-us-welcome-paragraph {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
+  }
+  .about-us-founder-bio-section {
+    width: 50%;
+  }
+  .our-stylists-bio-main-container {
+    justify-content: center;
+    gap: 30px;
+  }
+  .our-stylists-individual-container {
+    width: 30%;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 550px) {
   .header-banner h1 {
     font-size: 80px;
+  }
+  .our-stylists-bio-main-container {
+    width: 60%;
+  }
+  .our-stylists-individual-container {
+    width: 100%;
   }
 }
