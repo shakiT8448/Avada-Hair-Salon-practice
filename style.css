@@ -72,15 +72,9 @@ nav {
 }
 .header-banner button {
   padding: 10px 30px;
-  background-color: var(--default-button-color);
   font-size: 20px;
   font-weight: 500;
-  color: white;
   border: none;
-  transition: var(--default-transition);
-}
-.header-banner button:hover {
-  background-color: var(--default-button-hover-color);
 }
 .about-us {
   width: 100%;
@@ -90,10 +84,17 @@ nav {
 }
 .about-us-welcome-paragraph {
   width: 50%;
+  gap: 35px;
+}
+.about-us-welcome-paragraph,
+.our-stylists-paragraph,
+.our-services-main-paragraph,
+.contact-book-appointment-paragraph,
+.contact-how-to-find-us-paragraph,
+.contact-address-paragraph {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 35px;
   text-align: center;
 }
 h6 {
@@ -118,6 +119,18 @@ p {
   color: var(--paragraph-color);
   line-height: 30px;
   font-weight: 250;
+}
+button {
+  background-color: var(--default-button-color);
+  transition: var(--default-transition);
+  color: white;
+  border: none;
+  font-size: large;
+  height: 45px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: var(--default-button-hover-color);
 }
 .about-us-founder-section {
   width: 100%;
@@ -164,11 +177,7 @@ p {
 }
 .our-stylists-paragraph {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 30px;
-  text-align: center;
   margin: 80px auto 70px;
 }
 .our-stylists-bio-main-container {
@@ -207,11 +216,7 @@ p {
 }
 .our-services-main-paragraph {
   width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 30px;
-  text-align: center;
   margin: 80px auto 100px;
 }
 .services-main-container {
@@ -230,6 +235,129 @@ p {
   align-items: center;
   gap: 32px;
   color: var(--paragraph-color);
+}
+.contact {
+  width: 100%;
+  background: url(Images/services-bg3_26-e1518615760726.jpg) no-repeat center
+    center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.contact-book-appointment-paragraph {
+  width: 80%;
+  gap: 30px;
+  margin: 80px auto 100px;
+}
+.contact form {
+  width: 63%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact form input {
+  width: 48%;
+  height: 45px;
+}
+.contact form textarea {
+  width: 100%;
+  height: 90px;
+}
+.contact form input,
+.contact form textarea {
+  color: #494949a4;
+  border-radius: 0;
+  border: 1px solid #49494944;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.contact form button {
+  width: 100%;
+}
+.contact-how-to-find-us-paragraph {
+  width: 50%;
+  gap: 30px;
+  margin: 80px auto 100px;
+}
+.how-to-find-us-terms-of-privacy-main-container {
+  width: 83%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+.how-to-find-us-terms-of-privac-individual-containers {
+  width: 48%;
+  height: 360px;
+  background-color: rgb(209, 206, 206);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  border: 20px solid white;
+}
+.how-to-find-us-terms-of-privac-individual-containers p {
+  font-size: 20px;
+  width: 80%;
+}
+.how-to-find-us-terms-of-privac-individual-containers button {
+  width: 85%;
+}
+.contact-address-paragraph {
+  gap: 36px;
+  margin-bottom: 100px;
+}
+.contact-address-paragraph h2 {
+  font-size: 40px;
+}
+.contact-address-paragraph h6 {
+  line-height: 30px;
+}
+.contact-address-paragraph button {
+  padding: 0 30px;
+}
+.contact-contact-us-container {
+  width: 100%;
+  background-color: var(--main-website-color);
+  background-image: url(Images/footer-curve.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 100px 0 180px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+.contact-contact-us-container h2,
+.contact-contact-us-container p {
+  color: white;
+}
+.contact-contact-us-container p {
+  width: 70%;
+  margin-bottom: 60px;
+}
+.contact-contact-us-container h3 {
+  font-size: 32px;
+  font-weight: 400;
+}
+.contact-contact-us-container h4 {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+.contact-contact-us-container h6 {
+  color: #6e6e6e;
+}
+.contact-contact-us-container hr {
+  background-color: #6e6e6e;
 }
 footer {
   background-size: cover;
@@ -303,6 +431,12 @@ footer span {
   .our-stylists-individual-container {
     width: 30%;
     margin-bottom: 30px;
+  }
+  .contact form input {
+    width: 100%;
+  }
+  .how-to-find-us-terms-of-privac-individual-containers {
+    width: 80%;
   }
 }
 @media (max-width: 550px) {
