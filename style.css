@@ -11,6 +11,10 @@
   --default-button-hover-color: #b80c31;
   --paragraph-color: #494949;
 }
+a {
+  text-decoration: none;
+  color: var(--main-website-color);
+}
 main {
   display: flex;
   justify-content: center;
@@ -76,7 +80,7 @@ nav {
   font-weight: 500;
   border: none;
 }
-.about-us {
+#about-us {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -90,6 +94,7 @@ nav {
 .our-stylists-paragraph,
 .our-services-main-paragraph,
 .gallery-showcase-paragraph,
+.opening-times-paragraph,
 .contact-book-appointment-paragraph,
 .contact-how-to-find-us-paragraph,
 .contact-address-paragraph {
@@ -171,7 +176,7 @@ button:hover {
 .about-us-founder-picture {
   align-self: flex-end;
 }
-.our-stylists {
+#our-stylists {
   width: 100%;
   background: url(Images/stylist-bg.jpg) no-repeat center center;
   background-size: cover;
@@ -237,7 +242,7 @@ p {
   gap: 32px;
   color: var(--paragraph-color);
 }
-.prices {
+#prices {
   background-color: var(--main-website-color);
   width: 100%;
   padding: 100px 0;
@@ -292,7 +297,65 @@ p {
   color: white;
   list-style: none;
 }
-.contact {
+#gallery {
+  width: 100%;
+  background-color: #ebebeb;
+  padding: 80px 0;
+}
+.gallery-showcase-paragraph {
+  width: 70%;
+  gap: 20px;
+  margin: 0 auto 100px;
+}
+.gallery-images-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-1st-img {
+  width: 20%;
+  height: 400px;
+}
+.gallery-1st-img img {
+  object-fit: contain;
+}
+.gallery-1st-img {
+  width: 30%;
+  height: 200px;
+}
+#opening-times {
+  background-color: #ebebeb;
+  width: 100%;
+}
+.opening-times-paragraph {
+  gap: 30px;
+  margin-bottom: 80px;
+}
+.opentimes-main-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.weekly-opening-times {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 40%;
+}
+.daily-opening-times {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.daily-opening-times h3 {
+  color: #494949;
+  margin-bottom: 15px;
+  font-size: larger;
+}
+#contact {
   width: 100%;
   background: url(Images/services-bg3_26-e1518615760726.jpg) no-repeat center
     center;
@@ -307,29 +370,29 @@ p {
   gap: 30px;
   margin: 80px auto 100px;
 }
-.contact form {
+#contact form {
   width: 63%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.contact form input {
+#contact form input {
   width: 48%;
   height: 45px;
 }
-.contact form textarea {
+#contact form textarea {
   width: 100%;
   height: 90px;
 }
-.contact form input,
-.contact form textarea {
+#contact form input,
+#contact form textarea {
   color: #494949a4;
   border-radius: 0;
   border: 1px solid #49494944;
   margin-bottom: 30px;
   padding: 10px;
 }
-.contact form button {
+#contact form button {
   width: 100%;
 }
 .contact-how-to-find-us-paragraph {
@@ -440,6 +503,9 @@ footer span {
   .services-main-container {
     width: 90%;
   }
+  .opentimes-main-container {
+    width: 90%;
+  }
 }
 
 @media (max-width: 920px) {
@@ -457,20 +523,62 @@ footer span {
   }
   .offscreen-menu {
     display: block;
+    background-color: white;
     height: 100vh;
     width: 100%;
     position: fixed;
     top: 0;
-    right: -450px;
+    right: -800px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 3rem;
     transition: 0.3s ease;
   }
+  .offscreen-menu.active {
+    right: 0;
+  }
+  .hamburger-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+  }
+  .hamburger-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: var(--main-website-color);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+  .hamburger-menu span:nth-child(1) {
+    top: 25%;
+  }
+  .hamburger-menu span:nth-child(3) {
+    top: 75%;
+  }
+  .hamburger-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
   .about-us-welcome-paragraph {
     width: 80%;
+  }
+  .opentimes-main-container {
+    justify-content: center;
   }
 }
 @media (max-width: 800px) {
@@ -495,11 +603,14 @@ footer span {
   .prices-individual-container h3 {
     margin-bottom: 30px;
   }
+  .weekly-opening-times {
+    width: 80%;
+  }
   .contact form input {
     width: 100%;
   }
   .how-to-find-us-terms-of-privac-individual-containers {
-    width: 80%;
+    width: 70%;
   }
 }
 @media (max-width: 550px) {
